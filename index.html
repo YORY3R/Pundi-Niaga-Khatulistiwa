@@ -24,10 +24,15 @@
  <body>
   <div id="app" class="scrollable-layout full-height"></div>
   <div id="background"></div>
+  <script>
+   if (window.location.pathname.startsWith('/Pundi-Niaga-Khatulistiwa/')) {
+    if (window.location.pathname.split('/').length > 2) {
+     window.location.href = '/Pundi-Niaga-Khatulistiwa/index.html';
+    } else {
+     document.getElementById('app').innerHTML = '';
+     import('./index.js');
+    }
+   }
+  </script>
  </body>
- <script>
-  if (window.location.pathname.startsWith('/Pundi-Niaga-Khatulistiwa/')) {
-   window.location.href = '/Pundi-Niaga-Khatulistiwa/index.html';
-  }
- </script>
 </html>
