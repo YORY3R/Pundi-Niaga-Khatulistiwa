@@ -25,12 +25,20 @@
   <div id="app" class="scrollable-layout full-height"></div>
   <div id="background"></div>
   <script>
+   // Check if the URL starts with the base URL
+
+   console.log('MASUK MASUK');
+   console.log(window.location.pathname);
+
    if (window.location.pathname.startsWith('/Pundi-Niaga-Khatulistiwa/')) {
+    // If the URL contains a slash after the base URL, it's a specific route
     if (window.location.pathname.split('/').length > 2) {
-     window.location.href = '/Pundi-Niaga-Khatulistiwa/index.html';
+     // Redirect to the application's entry point (index.html)
+     // window.location.href = '/Pundi-Niaga-Khatulistiwa/index.html';
     } else {
-     document.getElementById('app').innerHTML = '';
-     import('./index.js');
+     // If it's the base URL, load the main application
+     document.getElementById('app').innerHTML = ''; // Clear existing content
+     import('./index.js'); // Import and load the application
     }
    }
   </script>
