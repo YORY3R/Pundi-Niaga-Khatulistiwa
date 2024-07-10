@@ -1,4 +1,4 @@
 RewriteEngine On
-RewriteBase /Pundi-Niaga-Khatulistiwa/  # Set base path
+RewriteBase /hahaha/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)$ index.html [L]
